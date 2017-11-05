@@ -1,0 +1,16 @@
+version: '3'
+
+volumes:
+  node_modules:
+  elm_stuff:
+
+services:
+  elm:
+    build:
+      context: .
+    volumes:
+      - ./:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+      - elm_stuff:/usr/src/app/elm-stuff
+    ports:
+      - 8080:8080
