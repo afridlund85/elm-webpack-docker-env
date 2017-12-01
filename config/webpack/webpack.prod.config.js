@@ -1,7 +1,7 @@
 let webpack = require('webpack'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
   merge = require('webpack-merge'),
-  commonConfig = require('./webpack.common.config')
+  commonConfig = require('./webpack.common.config'),
   { rootPath } = require('./helper')
 
 const entryPath = rootPath('src/assets/index.js')

@@ -3,7 +3,7 @@ let webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   { rootPath, DIST, SRC } = require('./helper')
 
-const isProduction = process.env.ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'production'
 const outputFilename = isProduction
   ? '[name]-[hash].js'
   : '[name].js'

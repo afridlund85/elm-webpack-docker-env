@@ -14,7 +14,12 @@ const devConfig = {
     contentBase: './src',
     host: '0.0.0.0',
     port: 8080,
-    hot: true
+    hot: true,
+    watchOptions: {
+      aggregateTimeout: 100,
+      poll: 300,
+      ignored: /node_modules/
+    }
   },
   module: {
     rules: [
