@@ -2,12 +2,10 @@ let merge = require('webpack-merge'),
   { rootPath } = require('./helper'),
   commonConfig = require('./webpack.common.config')
 
-const entryPath = rootPath('src/assets/index.js')
-
 const devConfig = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
-    entryPath
+    rootPath('src/index.js')
   ],
   devServer: {
     historyApiFallback: true,

@@ -4,10 +4,8 @@ let webpack = require('webpack'),
   commonConfig = require('./webpack.common.config'),
   { rootPath } = require('./helper')
 
-const entryPath = rootPath('src/assets/index.js')
-
 const prodConfig = {
-  entry: entryPath,
+  entry: rootPath('src/index.js'),
   module: {
     rules: [
       {
