@@ -1,8 +1,7 @@
 module Main exposing (..)
 
-import Html exposing (Html, div, program, text)
-import Model exposing (Model, Msg, init)
-import Update exposing (update)
+import Html exposing (program)
+import Model exposing (Model, Msg, model, update)
 import View exposing (view)
 
 
@@ -14,7 +13,7 @@ subscriptions model =
 main : Program Never Model Msg
 main =
     program
-        { init = init
+        { init = ( model, Cmd.none )
         , view = view
         , update = update
         , subscriptions = subscriptions
